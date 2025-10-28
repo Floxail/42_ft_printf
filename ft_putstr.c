@@ -6,7 +6,7 @@
 /*   By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 11:37:31 by flvejux           #+#    #+#             */
-/*   Updated: 2025/10/27 09:25:37 by flvejux          ###   ########.fr       */
+/*   Updated: 2025/10/28 09:45:16 by flvejux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_putstr(char *str)
 		return (0);
 	while (str[i])
 	{
-		write(1, str[i], 1);
+		ft_putchar(str[i]);
 		i++;
 	}
 	return (i);

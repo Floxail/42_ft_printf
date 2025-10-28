@@ -6,7 +6,7 @@
 /*   By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 09:38:19 by flvejux           #+#    #+#             */
-/*   Updated: 2025/10/27 14:27:06 by flvejux          ###   ########.fr       */
+/*   Updated: 2025/10/28 13:14:00 by flvejux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ int	ft_hexaprint(int n, char *base);
 int	ft_putunbr(unsigned int n);
 int	ft_putnbr_base(long nb, char *base);
 int	ft_strlen(const char *str);
+int	ft_uitoa(unsigned int n);
 
 #endif

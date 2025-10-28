@@ -6,11 +6,11 @@
 /*   By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:26:43 by flvejux           #+#    #+#             */
-/*   Updated: 2025/10/27 14:26:56 by flvejux          ###   ########.fr       */
+/*   Updated: 2025/10/28 09:43:26 by flvejux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_strlen(const char *str)
 {
