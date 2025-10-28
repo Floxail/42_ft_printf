@@ -6,11 +6,11 @@
 #    By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/28 11:53:10 by flvejux           #+#    #+#              #
-#    Updated: 2025/10/28 16:10:09 by flvejux          ###   ########.fr        #
+#    Updated: 2025/10/28 17:26:15 by flvejux          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_printf.a
+NAME = libftprintf.a
 
 CC = cc
 
