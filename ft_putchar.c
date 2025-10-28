@@ -6,12 +6,11 @@
 /*   By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 10:26:21 by flvejux           #+#    #+#             */
-/*   Updated: 2025/10/27 14:24:46 by flvejux          ###   ########.fr       */
+/*   Updated: 2025/10/28 16:20:56 by flvejux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 int	ft_putchar(char c)
 {
