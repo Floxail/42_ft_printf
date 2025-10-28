@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putpoint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 11:43:04 by flvejux           #+#    #+#             */
-/*   Updated: 2025/10/28 14:00:40 by flvejux          ###   ########.fr       */
+/*   Created: 2025/10/28 14:12:43 by flvejux           #+#    #+#             */
+/*   Updated: 2025/10/28 15:32:50 by flvejux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
-{
-	long	nbr;
-	int		len;
-
-	nbr = n;
-	if (nbr < 0)
-	{
-		nbr *= -1;
-		ft_putchar('-');
-	}
-	if (nbr >= 10)
-		ft_putnbr(nbr / 10);
-	len = ft_putchar(nbr % 10 + '0');
-	return (len);
-}
-
-int	ft_putunbr(unsigned int n)
+int	ft_putpoint(unsigned long long p)
 {
 	int	len;
 
-	if (n == 0)
-		ft_putchar('0');
-	if (n > 9)
-		ft_putunbr(n / 10);
-	len = ft_putchar(n % 10 + '0');
+	len = 0;
+	if (p == 0)
+		return (ft_putstr("nill"));
+	else
+	{
+		ft_putstr("0x");
+		len += ft_hexaprint(p, "x");
+	}
 	return (len);
 }

@@ -6,13 +6,13 @@
 /*   By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 11:54:25 by flvejux           #+#    #+#             */
-/*   Updated: 2025/10/28 11:02:13 by flvejux          ###   ########.fr       */
+/*   Updated: 2025/10/28 15:32:41 by flvejux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hexaprint(int n, char *base)
+int	ft_hexaprint(unsigned long long n, char *base)
 {
 	char	*hexa;
 	int		count;
@@ -27,10 +27,10 @@ int	ft_hexaprint(int n, char *base)
 	return (count);
 }
 
-int	ft_putnbr_base(long nb, char *base)
+int	ft_putnbr_base(unsigned long long nb, char *base)
 {
-	long	len;
-	int		count;
+	unsigned long	len;
+	int				count;
 
 	count = 0;
 	len = 0;

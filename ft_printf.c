@@ -6,7 +6,7 @@
 /*   By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 09:24:39 by flvejux           #+#    #+#             */
-/*   Updated: 2025/10/28 13:03:00 by flvejux          ###   ########.fr       */
+/*   Updated: 2025/10/28 15:40:37 by flvejux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ int	ft_arg(va_list args, char c, int size)
 		len += ft_putchar(va_arg(args, int));
 	if (c == 's')
 		len += ft_putstr(va_arg(args, char *));
-	/* if (c == 'p')
-		len += ft_putvoid(); */
+	if (c == 'p')
+		len += ft_putpoint(va_arg(args, unsigned long long));
 	if (c == 'd' || c == 'i')
 		len += ft_putnbr(va_arg(args, int));
 	if (c == 'u')
 		len += ft_putunbr(va_arg(args, unsigned int));
 	if (c == 'x' || c == 'X')
-		len += ft_hexaprint(va_arg(args, int), &c);
+		len += ft_hexaprint(va_arg(args, unsigned long long), &c);
 	if (c == '%')
 		len += ft_putchar('%');
 	size = len;
@@ -40,7 +40,6 @@ int	ft_printf(const char *str, ...)
 	int		i;
 	int		len;
 	va_list	args;
-
 
 	i = 0;
 	len = 0;
@@ -62,10 +61,17 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (len);
 }
-
+/* 
 int	main(void)
 {
-	printf("vrais; %u unsigned decimal ; %u usigned 2\n", -7, 12);
+	 printf("vrais; %u unsigned decimal ; %u usigned 2\n", -7, 12);
 
-	ft_printf("mines; %u unsigned decimal ; %u usigned 2\n", -7, 12);
+	ft_printf("mines; %u unsigned decimal ; %u usigned 2\n", -7, 12); 
+
+	int	a = 10;
+	int	*b = &a;
+
+	printf("vrais %p\n",b);
+	ft_printf("false %p\n",b);
 }
+*/
