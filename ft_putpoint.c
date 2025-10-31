@@ -6,7 +6,7 @@
 /*   By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:12:43 by flvejux           #+#    #+#             */
-/*   Updated: 2025/10/28 15:32:50 by flvejux          ###   ########.fr       */
+/*   Updated: 2025/10/31 10:07:28 by flvejux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ int	ft_putpoint(unsigned long long p)
 
 	len = 0;
 	if (p == 0)
-		return (ft_putstr("nill"));
+		return (ft_putstr("(nil)"));
 	else
 	{
-		ft_putstr("0x");
+		len += ft_putstr("0x");
 		len += ft_hexaprint(p, "x");
 	}
 	return (len);

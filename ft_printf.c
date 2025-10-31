@@ -6,17 +6,16 @@
 /*   By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 09:24:39 by flvejux           #+#    #+#             */
-/*   Updated: 2025/10/28 15:40:37 by flvejux          ###   ########.fr       */
+/*   Updated: 2025/10/31 10:34:02 by flvejux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_arg(va_list args, char c, int size)
+int	ft_arg(va_list args, char c, int len)
 {
-	int	len;
-
-	len = 0;
+	if (c == ' ' || (c >= 9 && c <= 13))
+		len++;
 	if (c == 'c')
 		len += ft_putchar(va_arg(args, int));
 	if (c == 's')
@@ -31,8 +30,7 @@ int	ft_arg(va_list args, char c, int size)
 		len += ft_hexaprint(va_arg(args, unsigned long long), &c);
 	if (c == '%')
 		len += ft_putchar('%');
-	size = len;
-	return (size);
+	return (len);
 }
 
 int	ft_printf(const char *str, ...)
@@ -48,30 +46,27 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			ft_arg(args, str[i + 1], len);
+			while (str[i + 1] == ' ')
+				i++;
+			len = ft_arg(args, str[i + 1], len);
 			i++;
 		}
 		else
 		{
 			ft_putchar(str[i]);
-			len++;
+			len ++;
 		}
 		i++;
 	}
 	va_end(args);
 	return (len);
 }
+
 /* 
 int	main(void)
 {
-	 printf("vrais; %u unsigned decimal ; %u usigned 2\n", -7, 12);
+	printf("V %llx ULLONG_max\n", 18446744073709551615);
 
-	ft_printf("mines; %u unsigned decimal ; %u usigned 2\n", -7, 12); 
-
-	int	a = 10;
-	int	*b = &a;
-
-	printf("vrais %p\n",b);
-	ft_printf("false %p\n",b);
+	ft_printf("F %x ULLong_max\n", 18446744073709551615);
 }
-*/
+ */
