@@ -6,7 +6,7 @@
 /*   By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 09:24:39 by flvejux           #+#    #+#             */
-/*   Updated: 2025/10/31 10:34:02 by flvejux          ###   ########.fr       */
+/*   Updated: 2025/11/11 08:11:40 by flvejux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_arg(va_list args, char c, int len)
 	if (c == 'u')
 		len += ft_putunbr(va_arg(args, unsigned int));
 	if (c == 'x' || c == 'X')
-		len += ft_hexaprint(va_arg(args, unsigned long long), &c);
+		len += ft_hexaprint(va_arg(args, unsigned int), &c);
 	if (c == '%')
 		len += ft_putchar('%');
 	return (len);
