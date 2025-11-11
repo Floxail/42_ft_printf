@@ -6,7 +6,7 @@
 /*   By: flvejux <flvejux@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 11:54:25 by flvejux           #+#    #+#             */
-/*   Updated: 2025/11/11 08:03:00 by flvejux          ###   ########.fr       */
+/*   Updated: 2025/11/11 08:16:47 by flvejux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ int	ft_hexaprint(unsigned long long n, char *base)
 	count = 0;
 	if (*base == 'X')
 		hexa = "0123456789ABCDEF";
-	// else if (*base == 'x')
-	// 	hexa = "0123456789abcdef";
 	count += ft_putnbr_base((long)n, hexa);
 	return (count);
 }
